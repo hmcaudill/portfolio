@@ -1,0 +1,128 @@
+/*these are the colors
+#ff0d0d red home
+#ff760d orange web design
+#ffe70d yellow graphic design
+#76ff0d green photoshop
+#0dffdf teal painting
+#0d7aff blue pencil
+#310dff indigo chalk
+#b60dff purple marker
+#ff0dba pink pastel
+*/
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+}
+.logo {
+    grid-column: span 2;
+    background-image: linear-gradient(to right, whitesmoke , #111111);
+}
+
+.header {
+    grid-column: span 10;
+    background: #111111;
+}
+.header h1 {
+    color: whitesmoke;
+    text-align: center;
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+/*Navigation Styles*/
+.navigation {
+    grid-column: span 2;
+    background: #111111;
+}
+ul li a{
+    color: white;
+    list-style-type: none;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+ul li {
+    margin-bottom: 20px;
+    margin-left: -35px;
+}
+.navigation ul {
+    list-style-type: none;
+}
+#painting {
+    background: #0dffdf;
+    color: #111111;
+}
+
+/*content styles!!*/
+.content {
+    grid-column: span 10;
+    background: whitesmoke;
+    border: 5px solid #0dffdf;
+    border-right: none;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+}
+.subcontent {
+    display: inline-block;
+    padding: 10px;
+}
+.subcontent img {
+    max-width: 250px;
+}
+.subcontent h3 {
+color: #0dffdf;
+text-shadow: #111111;
+}
+.subcontent img:hover {
+    transform: scale(1.5);
+  }
+
+/*Footer Styles*/
+.footer {
+    grid-column: span 10;
+    background: #111111;
+}
+.footer h3 {
+    color: whitesmoke;
+    text-align: center;
+}
+.footer ol li a{
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #0dffdf;
+}
+.footer ol {
+    list-style-type: none;
+}
+.footer ol li {
+    display: inline;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+@media only screen and (max-width: 649px) {
+.logo {
+    grid-column: span 0;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto auto;
+}
+.header {
+    grid-column: span 12;
+}
+.navigation {
+    grid-column: span 12;
+}
+.navigation ul li a {
+    font-size: 2em;
+}
+.content {
+    grid-column: span 12;
+    border: none;
+}
+.footer {
+    grid-column: span 12;
+}
